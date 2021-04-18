@@ -1,33 +1,40 @@
-import pygame
-from pygame import mixer
-pygame.init()
-mixer.music.load("Everybody's Circulation (Mashup) - TMABird.mp3")
-mixer.music.play()
-name=input('uiwhauid')
+#import pygame
+#from pygame import mixer
+#pygame.init()
+#mixer.music.load("Everybody's Circulation (Mashup) - TMABird.mp3")
+#mixer.music.play()
+
+name=input('Enter the name of your character\n')
 
 class character:
-    def __init__(self,race,hp,stealth,strength):
+    def __init__(self,race,hp,stealth,strength,charisma):
         self.race = race
         self.hp = hp
         self.stealth = stealth
         self.str = strength
+        self.charisma = charisma
+char_1 = character('Human',500,500,550,True)
+char_2 = character('Elf',600,600,450,True)
+char_3 = character('Dwarf',600,450,600,False)
+char_4 = character('Rito',500,550,500,False)
 
-char_1 = character('elf',10000,250,600)
-char_2 = character('human',800,300,4000)
 
-x= int(input('fefewef'))
+x= int(input('Choose race'))#Idhar apna daal de
 
 if x==1:
     y=char_1
-else:
+elif x==2:
     y=char_2
-def lvl1():
-    print(f'ompmpompmpmpop {y.race} sw')
+elif x==3:
+    y=char_3
+elif x==4:
+    y==char_4
+else:
+    print('Please choose a valid race!')
 
-lvl1()
-
-z= input("wefwefe")
-mixer.music.load("mgs.mp3")
-mixer.music.play()
-a=int(imput('dwf'))
+weapon = int(input('''It's dangerous to go alone! Pick a Weapon
+1) Sword
+2) Axe
+3) Mace
+'''))
 
