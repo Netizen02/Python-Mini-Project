@@ -30,4 +30,4 @@ z= input("wefwefe")
 mixer.music.load("mgs.mp3")
 mixer.music.play()
 a=int(imput('dwf'))
-#I can edit now
+
