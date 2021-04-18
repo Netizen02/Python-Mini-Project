@@ -28,7 +28,7 @@ elif x==2:
 elif x==3:
     y=char_3
 elif x==4:
-    y==char_4
+    y=char_4
 else:
     print('Please choose a valid race!')
 
