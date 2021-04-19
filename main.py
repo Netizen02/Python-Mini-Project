@@ -15,11 +15,6 @@ class character:
         self.charisma = charisma
         self.home = home
 
-char_1 = character('Human',500,500,550,True,'Cyrodill' )
-char_2 = character('Elf',600,600,450,True,'Valenwood')
-char_3 = character('Dwarf',600,450,600,False,'Moria')
-char_4 = character('Rito',500,550,500,False,'High Rock')
-
 x= int(input(f"""Welcome {name}.Before you begin the game you must choose a race. Given below are some of the races that 
 inhabit this land. Choose wisely:
 
@@ -51,13 +46,13 @@ inhabit this land. Choose wisely:
 """))
 
 if x==1:
-    y=char_1
+    y=character('Human',500,500,550,True,'Cyrodill' )
 elif x==2:
-    y=char_2
+    y=character('Elf',600,600,450,True,'Valenwood')
 elif x==3:
-    y=char_3
+    y=character('Dwarf',600,450,600,False,'Moria')
 elif x==4:
-    y=char_4
+    y=character('Rito',500,550,500,False,'High Rock')
 else:
     print('Please choose a valid race!')
 
@@ -77,7 +72,7 @@ else:
 
 def lvl_1_intro():
 
-    print(f"""After returning form {y.home} you thought the worst was behind you. The war was over, and
+    print("""After returning form {y.home} you thought the worst was behind you. The war was over, and
 here you were, sitting in an inn enjoying a pretty good ale. The horrors of the battlefield were
 behind you, or so you thought. The hour is late, and you’re weary from your travels. All you want
 is the warm embrace of a soft feather bed and the sweet scent of lilacs from the grove nearby. You
