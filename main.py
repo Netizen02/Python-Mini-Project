@@ -181,6 +181,144 @@ It’s not a company you recognize, could there be something more sinister at pl
 Do you want to infiltrate the camp? Or do you want to move on to Tiefling village?
 """)
 
+def lvl_2():
+    print(f"""As you approach the camp you notice something curious. The men are happy and merry as if they just came back
+from battle victorious. You decide to get closer in the camp. As you sneak around in the camp you hear someone speak. You
+crouch down low lest you be found. 
+
+"I don't believe that nasty little peice of shit had a chance. No one could have survived that burning inn. Revan will be
+pleased when we bring him his head. Now let's enjoy the stupidity of the recruits we picked up from Tiefling." 
+
+After saying this the men leave. You breathe a little easy, but realize...These are the same men who attacked you!
+They walk away to a set of tents. Everyone seems to retire to their tents now. It seems that the camp is going to sleep...
+""")
+
+    d1 = int(input("\nDo continue to sneak(press 1) or Do you attack(press 0)?\t"))
+
+    if d1 == 1:
+        print(f"""You continue to sneak around the outskirts of the camp. Soon you see another {y.race}. He goes to a nearby
+lake to swim and bathe. You quietly manage to steal his clothes and armor. You put your visor down so no one will recognise
+you.""")
+        if (y.stealth >= 550 and y.stealth <=600) :
+            print(f"""You hear a voice. "Hey! You! give me back my armor." You turn around and you quickly attack with your {weapon}
+before he makes anymore noise. Even though he puts up a fight, he is no match for you. He dies quickly when you land a strong
+blow with your {weapon} on his head. You quickly tie his legs to a stone using a nearby vine. You pick up the body and throw it
+into the lake. The stone keeps the body from floating up.
+            """)
+
+        print(f"""You enter the camp without suspicion. As you are walking through the camp a troll rushes up to you and says,
+
+"Hey! You're just the {y.race} I am looking for! I know it's late but Hera needs to see you. She has a job for a {y.race}.
+She said you might get some extra gold if you do it. I can't take you there, I have to fetch her some more wine, but you
+know her tent don't you?" 
+        """)
+        d=int(input("\nPress 1 to nod yes, Press 0 to nod no"))
+        if d==1:
+            print(f"""
+        "Great! Saved me a lot of time." He says running off
+        """)
+        elif d==0:
+            print(f"""
+        "No, I'm a new recruit from Tiefling," you say
+        "Oh you stupid new recruits. Look for the blue commander's tent. You can't miss it. And don't tell the guards you're 
+        a new recruit. If Hera finds out I sent her a newbie, she'll have my head for breakfast!" He says running off.
+        """)
+        print(f"""You wander around a little trying to find Hera's tent. You overhear that she is the commander-in-charge of
+the mercenary group and the right hand of Revan nowadays. Again that name, Revan who in the nine realms is that? You see that the camp is
+organised quite intelligently. The newbies guard the armory, so if attacked they can gear up quickly; but the armory is
+in the center of the camp. The newbies surround the camp in a crescent. The entrance and exit for the camp is situated by
+the lake, to prevent any invading armies. Though you were able to enter the camp from there, so maybe not the best
+judgement. The enitre camp is arranged in a crescent with the smaller crescent of the new recruits inside it. The larger
+crescent has a kitchen, a trainging ground and quarter for the senior members of the group. You found Hera's tent just facing opposite to
+the "armory" tent. There has to be something important in there. You wouldn't risk the commander's life putting her in front
+of the armory. As you enter the tent, you find Hera sipping wine. "The troll sent me", you say remembering your war years.
+You immediately stand at attention.
+
+"At ease," says Hera. "Do you know why we burnt down the inn, instead of killing that bastard in the inn itself?"
+
+You nod no, trying to speak as little as possible hoping no one finds out you're actually alive.
+
+"We had to steal a very important saphire from the bank in the town. The inn is owned by the same person who
+owns the bank. When the inn burnt, he diverted most of his men to salvage whatever they could from the inn. Quite useless, as
+greek fire burns through everything. And while the bank was unprotected we robbed it."
+
+You nod yes, this makes sense. The strategy was a classic diversion. But why were you targeted???
+
+"Your job now", she continued "is to transport the artifact to Revan himself. The saphire was cursed by an ancient warlock from the 
+old country to bring the cause of Revan's death. Now if I send you on such a mission then I need your trust. You need to take this saphire to Feca of Tiefling.
+He knows how to crush cursed stones into powder, and destroy them. You will be given 7000 gold pieces upon the completion of this mission.
+350 now and the rest later. Pick it up from the armory."
+
+You go to the armory and pick up the saphire and the gold.
+""")
+        if (y.stealth >= 550 and y.stealth <=600) :
+            print("After you pick up the saphire you leave the camp. You continue down the path to meet Feca in Tiefling. There are some things he has to answer for...")
+            y.hp += 50
+            y.stealth += 50
+            y.str += 50
+        else:
+            print(f"""After you pick up the artifact you walk straight to get out of the camp. But you see him. The {y.race} who was bathing has come back. He got new armor somehow.
+The entire camp is facing the entrance to the armory. Fighting head on is stupid. Before you cane figure an escape, 10 of the newbies charge. You fight them off with near ease, they've
+just been woken up that there is an intruder in the armory. They're sleep deprived and not at all battle hardened. But as you finish of those 10, 10 more attack, with more coming up
+behind them. You can't fight this entire army alone, it isn't possible. And definitely not in this setting where you are pinned down by the oncoming swarm. Wait! The armory is right
+behind you. Maybe you can use something in there. Inside you find a barrel of greek fire. 
+""")
+            y.hp -= 100
+            y.str -= 50
+            d=int(input("Do you use greek fire? press 1 for yes and 0 for no"))
+            if d== 1 :
+                print(f"""Yes! Greek fire is indestructable, it can catch anything on fire, be it metal or clothes. You dip a spare piece of wood into it, light it and throw it onto the
+incoming army. As they burn, you set up a rudimentary bomb using gunpowder and greek fire. However for the plan to work, you need to draw as many soldiers as possible into the armory tent.
+You quickly position yourself at the exit and prepare to lure as many possible enemies in as possible. 
+""")
+                if y.race == "Human" :
+                    print(f"""The enemies are lured into your trap and you leave just as the bomb explodes, igniting greek fire and spraying it all over the camp. Because of the explosion,
+the entire camp is in complete disarray. Many men are dead. There is confusion all around, similar to what happened at the inn. You smile to yourself. Tonight was good... As you walk down
+your path you see the sun rise. A good omen, but a signal that a lot of time has passed. You continue down the path to meet Feca in Tiefling. There are some things he has to answer for...
+""")
+                else:
+                    print(f"""The enemies are lured into your trap and you leave just as the bomb explodes, igniting greek fire and spraying it all over the camp. However, you are late by
+barely a second and your armor is caught on fire. You quickly run out of the camp lighting everything on fire. Once you have caused more chaos, you run to the lake to douse the fire. The
+fire douses out, but you have suffered some burns. Luckily as you were in the army, you know how to take care of them. But you are weakened for your journey. On a positive note, because of
+the explosion, the entire camp is in complete disarray. Many men are dead. There is confusion all around, similar to what happened at the inn. You smile to yourself. Tonight was good...
+As you walk down your path you see the sun rise. A good omen, but a signal that a lot of time has passed. You continue down the path to meet Feca in Tiefling.
+There are some things he has to answer for...
+""")
+                    y.hp -= 50
+            if d==0:
+                print(f"""ALAS great warrior. The enemies are too many, and your strength too little. As you continue to fight your enemies, someone stabs you in the back. Almost on cue you
+are cut in the stomach and the neck. You are then left for dead. You never found out why they were out to kill you. You slowly give in to the Eternal Slumber, the warrior spirit still fighting...
+GAME OVER
+""")
+    elif d1 == 0:
+        print(f"""Digusted by these men you attack the entire camp head on! You were in the war you can take on these lumps of clay. You catch the camp by surprise and kill all the guards who
+are awake. The rest still sleep. It is only you who is awake.
+""")
+        if y.str<500:
+            print(f"""Or so you thought. Men awoke in the commotion and are charging at you for battle. You fight and give one last stand but ALAS great warrior. The enemies are too many, and your strength too little. As you continue to fight your enemies, someone stabs you in the back. Almost on cue you
+are cut in the stomach and the neck. You are then left for dead. You never found out why they were out to kill you. You slowly give in to the Eternal Slumber, the warrior spirit still fighting...
+GAME OVER
+""")
+        elif y.str>=500 and y.str < 550:
+            print(f"""Or so you thought. Men awoke in the commotion and are charging at you for battle. You fight and give one last stand. You fight left and right. A sort of blood lust takes over
+you. You take down tens or hundreds of men with their bodies piling up around you. You take some deep cuts, but it is almost like the warrior goddess has blessed you. Soon enough the mercenaries are
+scared of facing you and they run away. You finally calm down enough to walk through the near deserted camp. you reach the armory and find a saphire just carelessly sitting there. It seems to
+call to you. You pick it up and decide to keep it. After you pick up the saphire you leave the camp. You continue down the path to meet Feca in Tiefling. There are some things he has to answer for...
+""")
+            y.hp -= 100
+        elif y.str>=600:
+            print(f"""Or so you thought. Men awoke in the commotion and are charging at you for battle. You fight and give one last stand. You fight left and right. A sort of blood lust takes over
+you. You take down tens or hundreds of men with their bodies piling up around you. It is almost like the warrior goddess has blessed you. This thought gives you more strength that anything. Soon
+enough the mercenaries are scared of facing you and they run away. You finally calm down enough to walk through the near deserted camp. You reach the armory and find a saphire just carelessly sitting
+there. It seems to call to you. You pick it up and decide to keep it. After you pick up the saphire you leave the camp. You continue down the path to meet Feca in Tiefling. There are some things he
+has to answer for...
+""")
+        y.hp += 50
+        y.str += 50
+        y.stealth += 50
+    else:
+        print(f"""Please enter a correct value""")
+
 lvl_1_intro()
 c1= int(input(''))
 
@@ -208,3 +346,9 @@ elif c1==2:
             lvl_1_2_sneak_nu()
 
 lvl_1_3()
+d1 = int(input())
+
+if d1 == 1:
+    lvl_2()
+elif d1 == 0:
+    lvl_3_()
