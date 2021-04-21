@@ -72,7 +72,7 @@ else:
 
 def lvl_1_intro():
 
-    print("""After returning form {y.home} you thought the worst was behind you. The war was over, and
+    print(f"""After returning form {y.home} you thought the worst was behind you. The war was over, and
 here you were, sitting in an inn enjoying a pretty good ale. The horrors of the battlefield were
 behind you, or so you thought. The hour is late, and you’re weary from your travels. All you want
 is the warm embrace of a soft feather bed and the sweet scent of lilacs from the grove nearby. You
