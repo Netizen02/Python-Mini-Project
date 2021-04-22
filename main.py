@@ -410,5 +410,4 @@ d1 = int(input())
 
 if d1 == 1:
     lvl_2()
-elif d1 == 0:
-    lvl_3_()
+lvl_3_()
