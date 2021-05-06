@@ -349,7 +349,7 @@ You slowly give in to the Eternal Slumber, the warrior spirit still fighting...
 
                             GAME OVER
 """)
-        elif y.str>=500 and y.str < 550:
+        elif y.str>=500 and y.str <= 550:
             print(f"""
 Or so you thought. Men awoke in the commotion and are charging at you for battle. You fight and give one last stand. You
 fight left and right. A sort of blood lust takes over you. You take down tens or hundreds of men with their bodies piling
