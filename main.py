@@ -378,7 +378,177 @@ There are some things he has to answer for...
         y.stealth += 50
     else:
         print(f"""Please enter a correct value""")
+def lvl3():
+    print(f'''You arrive at Tiefling village, exhausted from spending days on the road. You decide the best place to
+start the investigation would be the village tavern. After getting a much needed drink, you start asking around about
+Feca.When you ask the man behind the counter, he points towards the half naked bearded man outside the bar.’That’s him
+right there’.You had heard stories of him being a drunk loudmouth, but actually seeing him like that was rather
+hilarious. Do you invite him for another round or use a more direct method to find out what he knows…
+''')
+def lvl3_c_ye():
+    print(f'''You walk up to him, he immediately shouts “Th-There’s my drinking buddy!What say you buy me another round
+to old times eh pal”.He must be rather desperate if he made you, a complete stranger is buddy. “Sure Feca, lets go get 
+you a drink”. You get two pints of mead and slowly watch him get drunk. For a rather tiny man he sure could hold his
+drink. You were worried you’d run out of cash before you got anything out of him. Then, he suddenly says,’Say what,you 
+look trustworthy. Ya wanna share some secrets,I’ll go first. Ya know that inn that was raided a few days ago, I supplied
+them with the weapons .It was a proper massacre I hear,all thanks to my weapons.Their Ruthorham weapons looked like toys
+in front of my creations I tell ya!’
 
+“So they were from Ruthorham?” you ask
+
+“Where else would they be from, it’s where their dumb kind lurks all the time!Hey now, it’s your turn.Tell me a secret!”
+
+“Ah-well that’s easy, I’m gay Feca”
+
+“You’re WHAT! Ge-Get out of my sight.You and your kind are truly the scum of the Earth,worse than them Ruthorham folks 
+yeah!”
+
+“Ah well, as you say Feca, nice meeting you”
+
+“Don’t talk to me!”
+
+So the rumors of him being bigoted were true too. Doesn't matter though, he told you exactly where to go.After resting 
+a little more you set out for Ruthorham the next morning
+''')
+def lvl3_c_nu():
+    print(f'''You walk up to him, he immediately shouts “Th-There’s my drinking buddy!What say you buy me another round
+to old times eh pal”.He must be rather desperate if he made you, a complete stranger is buddy. “Sure Feca, lets go get 
+you a drink”. You get two pints of mead and slowly watch him get drunk. For a rather tiny man he sure could hold his 
+drink. You were worried you’d run out of cash before you got anything out of him.Desperate for information, you ask him 
+“So,what do you know about the inn that burned down a few days ago”.He looked at you suspiciously.
+
+“No-Nothing! Why do you ask!Ya know what, you’re not my buddy!A buddy won’t ask incriminating questions like that.N-Now
+get out before I call the guards!!”
+
+You blew it, now he won’t tell you anything. There must be some other way to find out more about the attack. 
+You head to his shop and notice the lights are out, maybe no one’s inside?You manage to break in through the back 
+window.It’s pitch black, though you manage to light a lamp and look around. You find a fancy trunk with a huge padlock 
+on it. Using your {weapon} you break it and find it’s full of gold from Ruthorham .That must mean his “clients” must be 
+from Ruthorham, and that’s where you must go next. As you’re leaving you accidentally trip the lamp,and it lands 
+directly on his mead collection. The fire spreads quickly and you manage to get out of there.
+
+Guards and villagers alike quickly surround the burning building.
+“Stop right there{y.race}! Explain Yourself!
+''')
+def lvl3_caught():
+    print(f'''“Woah now, let’s all just calm down. That was nothing more than an accident, I’m sure we can find a
+compromise here”. You throw a pouch of Ruthorham gold you took from the trunk.
+
+“That pouch is more valuable than anything either of you own, let me go and it’s all yours”.
+
+One of the guards slowly approaches the pouch and picks it up.
+
+“By the Gods, it’s Ruthorham gold!”
+
+The captain of the guards fires an arrow that whizzes past your ear.
+
+“Thanks for the treasure scum!”
+
+You need to think fast, take them head on or try and take them out one by one?
+''')
+def lvl3_brute():
+    print(f'''You take out your {weapon} and charge at the guards. Seeing the berserker in front of them, the guards 
+drop their weapons and flee. The captain orders his men back, and attacks you with the ones remaining. You cut through 
+them with ease, until it’s just you and the captain.
+
+“You monster!” Shouts the captain as he swings his sword at you wildly. You duck and strike him down.
+
+As soon as the carnage is over, you head for Ruthorham without looking back. You know you can never return to Tiefling 
+again.
+''')
+if y.str>=550:
+    y.hp -= 50
+elif y.str>=500:
+    y.hp -= 100
+
+def lvl3_run():
+    print(f'''You use a smoke bomb and manage to disappear in the chaos. After climbing a nearby building, you use your
+bow to snipe off the guards below looking for you below. One by one they fall in the darkness of the night. 
+Once you cleared a path for yourself, you slowly descend and leave Tiefling village, knowing you can never return.
+''')
+def lvl3_brute_death():
+    print(f'''You take out your {weapon} and charge at the guards, a brave gesture.But foolish.
+They fire arrow after arrow till you drop dead in your tracks
+
+Alas mighty hero! Your tale ends here....
+
+''')
+def lvl3_run_death():
+    print(f'''You try to run away hoping to regroup and take the guards on later, but you’re hit on the head with 
+a stone by a villager. Knocked out, the guards easily capture you and execute you!
+
+Alas mighty hero! Your tale ends here....
+''')
+def lvl3_interrogate():
+    print(f'''You walk up to him and grab him by the neck
+
+“H-Hey let go of me!!” “Guards!Guards!!”
+
+You quickly punch him in the face to silence him.You drag him to the back of the inn and tie him to the stable doors.
+
+“Now Feca, These past few days have been rather unpleasant for me, no thanks to you.So don’t make me ask you twice.Who
+bought the weapons for the mercenaries that attacked the inn on Dragontail Walk!”
+
+“I-I don’t know what you’re talking about!! Me swears!”
+
+You punch him in the stomach and draw put your {weapon}
+
+“Do your worst! If I talk Hera will have my head!”
+
+“If you don’t, Hera won’t get the chance to”
+
+“Go to hell!”
+
+This was taking too much time, you take out your knife and stab him in the gut. He screams and twitches.” All right 
+All right!! It was a group from Ruthorham. They warned me not to talk, now make this stop!!”
+
+“See, that was easy, now hold still”
+
+You bandage him up and release him. “This never happened Feca, are we clear?”
+
+“Y-Yes”
+
+“Good”
+
+With that out of the way, you now knew exactly where to go.After resting a little more you set out for Ruthorham the 
+next morning
+''')
+def lvl3_interrogate_nu():
+    print(f'''You walk up to him and grab him by the neck
+
+“H-Hey let go of me!!” “Guards!Guards!!”
+
+You quickly punch him in the face to silence him.You drag him to the back of the inn and tie him to the stable doors.
+
+“Now Feca, These past few days have been rather unpleasant for me, no thanks to you.So don’t make me ask you twice.Who
+bought the weapons for the mercenaries that attacked the inn on Dragontail Walk!”
+
+“I-I don’t know what you’re talking about!! Me swears!”
+
+You punch him in the stomach and draw put your {weapon}
+
+“Do your worst! If I talk Hera will have my head!”
+
+“If you don’t, Hera won’t get the chance to”
+
+“Go to hell!”
+
+This was taking too much time, you take out your knife and stab him in the gut. He screams and twitches.He goes limp,his
+breathing is faint.You realise you messed up.
+
+After releasing him you rush to the village doctor and tell him Feca was stabbed in a bar fight.The doctor says he’s 
+unconscious but may survive
+
+You blew it, now he won’t tell you anything even if he survives. There must be some other way to find out more about 
+the attack. You head to his shop and notice the lights are out, maybe no one’s inside?You manage to break in through 
+the back window.It’s pitch black, though you manage to light a lamp and look around. You find a fancy trunk with a huge 
+padlock on it. Using your {weapon} you break it and find it’s full of gold from Ruthorham .That must mean 
+his “clients” must be from Ruthorham, and that’s where you must go next. As you’re leaving you accidentally trip the 
+lamp,and it lands directly on his mead collection. The fire spreads quickly and you manage to get out of there.
+
+Guards and villagers alike quickly surround the burning building.
+“Stop right there{y.race}! Explain Yourself!
+''')
 lvl_1_intro()
 c1= int(input(''))
 
@@ -410,4 +580,40 @@ d1 = int(input())
 
 if d1 == 1:
     lvl_2()
-lvl_3_()
+lvl3()
+e1 = int(input(''))
+
+if e1==1:
+    if y.charisma:
+        lvl3_c_ye()
+    else:
+        lvl3_c_nu()
+        lvl3_caught()
+        e2=int(input(''))
+        if e2==1:
+            if y.str>=500:
+                lvl3_brute()
+            else:
+                lvl3_brute_death()
+        elif e2==2:
+            if y.charisma:
+                lvl3_run()
+            else:
+                lvl3_run_death()
+elif e1==2:
+    if y.str>=500:
+        lvl3_interrogate()
+    else:
+        lvl3_interrogate_nu()
+        lvl3_caught()
+        e2 = int(input(''))
+        if e2 == 1:
+            if y.str >= 500:
+                lvl3_brute()
+            else:
+                lvl3_brute_death()
+        elif e2 == 2:
+            if y.charisma:
+                lvl3_run()
+            else:
+                lvl3_run_death()
