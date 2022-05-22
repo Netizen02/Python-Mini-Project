@@ -1,2 +1,2 @@
 # Python-Mini-Project
-Sasta DnD
+Creating a DnD type game, using python kivy module.
